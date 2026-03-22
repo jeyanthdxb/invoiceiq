@@ -8,10 +8,9 @@ from pdf_generator import generate_invoice_pdf
 
 app = FastAPI()
 
-# Allow React frontend to talk to backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
